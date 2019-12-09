@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Abacate</title> 
+
+<!-- Início Tags para aplicação mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Fim Tags para aplicação mobile -->
+
+<!-- Custom Theme files -->
+<link href="../css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="../css/menu.css" type="text/css" rel="stylesheet" media="all">
+<link href="../css/style_resultado.css" type="text/css" rel="stylesheet" media="all">
+<link href="../css/style_autocomplete_pesquisa.css"  type="text/css" rel="stylesheet">
+<link href="../css/responsivo.css" type="text/css" rel="stylesheet" media="all">
+<link href="../css/search.css" type="text/css" rel="stylesheet" media="all">
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+<link href="../css/style_menu_balls.css" type="text/css" rel="stylesheet" media="all">
+<!-- //Custom Theme files -->
+
+<!-- FAVICON HTML5-->
+<link rel="icon" href="../img/icone_app.png">
+
+<!-- Início link javascripts -->
+<script src="../js/jquery-2.2.3.min.js"></script> 
+<script src="../js/jquery.nicescroll.min.js"></script> <!-- Barra de Rolagem -->
+<!-- Fim link javascripts -->
+<script src="../js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="../cordova.js"></script>
+		
+	<!-- Início menu -->
+	<div class="menu-wrap" id="style-1"> 
+		<nav class="top-nav">
+			<ul class="icon-list">
+				<li class="menu-title">MENU</li>
+				<li><a href="../index.html">Início</a></li>
+				<li><a href="#">Sonhos de A a Z</a></li>
+				<li><a href="#">Sobre o App</a></li>
+				<li><a href="#">Avalie o App</a></li>
+				<li>
+					<a href="javascript:void(0)" onclick="socialsharingDemo()" class="bt_share">
+						Compartilhe o App
+					</a>
+					<!-- plugins compartilhar -->
+					<script src="../js/socialsharing-plugin.js"></script>
+					<!-- plugins compartilhar -->
+				</li>
+			</ul>
+		</nav>
+		<button class="close-button" id="close-button">C</button>
+	</div>
+	<!-- Fim menu -->
+		
+	<!-- Início corpo site -->
+	<div class="content-wrap">	
+		<!-- Início topo -->
+		<div class="header">
+		
+			<div class="bt_header_left">
+				<a href="javascript:history.back()">
+					<img src="../img/arrow_left.svg">
+				</a>
+			</div>
+			
+			<div class="logo">				
+				<img src="../img/logo.svg" alt="">				
+			</div>
+			
+			<div class="bt_header_right">				
+				<a href="javascript:void(0)" onclick="socialsharingDemo()" class="bt_share">
+					<img src="../img/share.svg">
+				</a>
+				<!-- plugins compartilhar -->
+				<script src="js/socialsharing-plugin.js"></script>
+				<!-- plugins compartilhar -->
+			</div>			
+		</div>				
+		
+		
+		<!-- Fim topo -->
+		
+		<!-- Início Conteúdo -->
+		<div class="conteudo">
+			
+		</div>
+		<!-- Fim conteúdo -->		
+	</div>
+	<!-- Fim corpo site -->
+	
+	<!-- Início menu-js -->
+	<script src="../js/classie.js"></script>
+	<script src="../js/main.js"></script>
+	<!-- Fim menu-js -->
+	
+	<!-- Início nice scroll-js -->	
+	<script>
+		$(document).ready(function() {	  
+			var nice = $("html").niceScroll();  // The document page (body)		
+			$("#div1").html($("#div1").html()+' '+nice.version);		
+			$("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:true}); // First scrollable DIV
+		});
+	</script>
+	<!-- Fim nice scroll-js -->
+
+	<!-- inicio auto-complete-js -->
+	<script>
+		function autocomplete(inp, arr) {
+		/*the autocomplete function takes two arguments,
+		the text field element and an array of possible autocompleted values:*/
+		var currentFocus;
+		/*execute a function when someone writes in the text field:*/
+		inp.addEventListener("input", function(e) {
+			var a, b, i, val = this.value;
+			/*close any already open lists of autocompleted values*/
+			closeAllLists();
+			if (!val) { return false;}
+			currentFocus = -1;
+			/*create a DIV element that will contain the items (values):*/
+			a = document.createElement("DIV");
+			a.setAttribute("id", this.id + "autocomplete-list");
+			a.setAttribute("class", "autocomplete-items");
+			/*append the DIV element as a child of the autocomplete container:*/
+			this.parentNode.appendChild(a);
+			/*for each item in the array...*/
+			for (i = 0; i < arr.length; i++) {
+				/*check if the item starts with the same letters as the text field value:*/
+				if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+				/*create a DIV element for each matching element:*/
+				b = document.createElement("DIV");
+				/*make the matching letters bold:*/
+				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+				b.innerHTML += arr[i].substr(val.length);
+				/*insert a input field that will hold the current array item's value:*/
+				b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				/*execute a function when someone clicks on the item value (DIV element):*/
+				b.addEventListener("click", function(e) {
+					/*insert the value for the autocomplete text field:*/
+					inp.value = this.getElementsByTagName("input")[0].value;
+					/*close the list of autocompleted values,
+					(or any other open lists of autocompleted values:*/
+					closeAllLists();
+				});
+				a.appendChild(b);
+				}
+			}
+		});
+		/*execute a function presses a key on the keyboard:*/
+		inp.addEventListener("keydown", function(e) {
+			var x = document.getElementById(this.id + "autocomplete-list");
+			if (x) x = x.getElementsByTagName("div");
+			if (e.keyCode == 40) {
+				/*If the arrow DOWN key is pressed,
+				increase the currentFocus variable:*/
+				currentFocus++;
+				/*and and make the current item more visible:*/
+				addActive(x);
+			} else if (e.keyCode == 38) { //up
+				/*If the arrow UP key is pressed,
+				decrease the currentFocus variable:*/
+				currentFocus--;
+				/*and and make the current item more visible:*/
+				addActive(x);
+			} else if (e.keyCode == 13) {
+				/*If the ENTER key is pressed, prevent the form from being submitted,*/
+				e.preventDefault();
+				if (currentFocus > -1) {
+				/*and simulate a click on the "active" item:*/
+				if (x) x[currentFocus].click();
+				}
+			}
+		});
+		function addActive(x) {
+			/*a function to classify an item as "active":*/
+			if (!x) return false;
+			/*start by removing the "active" class on all items:*/
+			removeActive(x);
+			if (currentFocus >= x.length) currentFocus = 0;
+			if (currentFocus < 0) currentFocus = (x.length - 1);
+			/*add class "autocomplete-active":*/
+			x[currentFocus].classList.add("autocomplete-active");
+		}
+		function removeActive(x) {
+			/*a function to remove the "active" class from all autocomplete items:*/
+			for (var i = 0; i < x.length; i++) {
+			x[i].classList.remove("autocomplete-active");
+			}
+		}
+		function closeAllLists(elmnt) {
+			/*close all autocomplete lists in the document,
+			except the one passed as an argument:*/
+			var x = document.getElementsByClassName("autocomplete-items");
+			for (var i = 0; i < x.length; i++) {
+			if (elmnt != x[i] && elmnt != inp) {
+				x[i].parentNode.removeChild(x[i]);
+			}
+			}
+		}
+		/*execute a function when someone clicks in the document:*/
+		document.addEventListener("click", function (e) {
+			closeAllLists(e.target);
+		});
+		}		
+		/*An array containing all the country names in the world:*/
+		var countries = [
+		"A",
+		"Abacate",
+		"Afghanistan",
+		"Albania",
+		"Algeria",
+		"Andorra",
+		"Angola",
+		"Anguilla",
+		"Antigua & Barbuda",
+		"Argentina",
+		"Armenia",
+		"Aruba",
+		"Australia",
+		"Austria",
+		"Azerbaijan",
+		"Bahamas",
+		"Bahrain",
+		"Bangladesh",
+		"Barbados",
+		"Belarus",
+		"Belgium",
+		"Belize",
+		"Benin",
+		"Bermuda",
+		"Bhutan",
+		"Bolivia",
+		"Bosnia & Herzegovina",
+		"Botswana",
+		"Brazil",
+		"British Virgin Islands",
+		"Brunei",
+		"Bulgaria",
+		"Burkina Faso",
+		"Burundi"
+		];		
+		/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+		autocomplete(document.getElementById("myInput"), countries);
+	</script>
+	<!-- fim auto-complete-js -->	
+
+</body>
+</html>
