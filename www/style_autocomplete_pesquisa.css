@@ -1,0 +1,66 @@
+
+* {
+	box-sizing: border-box;
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+	position: relative;
+	display: inline-block;
+	text-align:left;
+	float:center;
+	width:30%;
+}
+
+input {
+	border: 1px solid transparent;
+	background-color: #f1f1f1;
+	padding: 5px;
+	font-size: 16px;
+	float:center;
+	height:35px;
+}
+
+input[type=text] {
+	background-color: #f1f1f1;
+	width: 100%;
+}
+
+input[type=submit] {
+	background-color:#1cbfff;
+	color: #fff;
+	cursor: pointer;
+}
+
+.autocomplete-items {
+	position: absolute;
+	border: 0px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	/*position the autocomplete items to be the same width as the container:*/
+	top: 100%;
+	left: 17px;
+	right: 0;
+}
+
+.autocomplete-items div {
+	padding: 7px;
+	cursor: pointer;
+	background-color: #f7f7f7; 
+	border-bottom: 1px solid #d4d4d4; 
+	font-size:13px;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+	background-color: #f1f1f1; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+	background-color: DodgerBlue !important; 
+	color: #ffffff; 
+}
+
+

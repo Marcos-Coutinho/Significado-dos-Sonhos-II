@@ -1,0 +1,67 @@
+
+/* search */
+.search_pesq input[type="search"] {
+    outline: none;
+    padding: 12px 15px;
+    color: #000;
+    font-size: 13px;
+    border: none;
+    letter-spacing: 1px;
+    background: #f7f7f7; /* f7f7f7 */
+	border-top-left-radius: 25px;
+	border-bottom-left-radius:25px;
+		width:100%;
+
+}
+
+.search_pesq button {
+	outline: none;
+    background: #1cbfff;
+    color: #fff; /* 0b0c1b */
+    border: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius:25px;
+	cursor:pointer;
+}
+/* //search */
+
+/*-- bootstrap.min --*/
+.d-flex-search{
+	display:-webkit-box!important;
+	display:-ms-flexbox!important;
+	display:flex!important
+}
+
+.justify-content-center-search{
+	-webkit-box-pack:center!important;
+	-ms-flex-pack:center!important;
+	justify-content:center!important
+}
+/*-- fim bootstrap.min --*/
+
+/* início responsivo */
+@media(max-width:1280px){
+	.search_pesq input[type="search"] {
+		padding: 10px 15px;
+	}	
+	.search_pesq button {
+		padding: 8px 15px;
+	}
+}
+
+@media(max-width:667px){
+	.search_pesq input[type="search"] {
+		padding: 8px 15px;
+	}
+	.autocomplete {
+		width:75%;
+	}
+}
+/* fim responsivo */
+
