@@ -11,7 +11,7 @@
     <content src="splash.html" />
 	
 	<preference name="orientation" value="portrait" />
-	<preference name="android-installLocation" value="false" />
+	<preference name="android-installLocation" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="21" />
     <preference name="StatusBarOverlaysWebView" value="true" />
