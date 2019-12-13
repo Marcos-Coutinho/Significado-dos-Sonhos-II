@@ -13,10 +13,9 @@
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/menu.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style_resultado.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style_autocomplete_pesquisa.css"  type="text/css" rel="stylesheet">
+<link href="css/style_pesquisa.css"  type="text/css" rel="stylesheet">
 <link href="css/responsivo.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style_search.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/font-awesome.min.css" rel="stylesheet">
 <!-- //Custom Theme files -->
 
 <!-- FAVICON HTML5-->
@@ -88,10 +87,12 @@
 			<div class="bt_header_right">				
 				<!-- inicio busca -->
 				<div class="busca">
-					<img src="img/buscar.png" />
+					<img src="img/search_branco.svg" />
 					<form method="get" autocomplete="off" action="resultado.html">
-						<span class="busca-close"></span>
-						<input type="search" name="Pesquisar" placeholder="Pesquise aqui..." />
+						<span class="busca-close"></span>						
+						<div class="autocomplete">
+							<input type="text" name="Pesquisar" id="myInput" required="" placeholder="Pesquise aqui..." />
+						</div>
 					</form>
 				</div>
 				<!-- fim busca -->	
@@ -222,22 +223,9 @@
 		}		
 		/*An array containing all the country names in the world:*/
 		var countries = [
-		"Afghanistan",
-		"Albania",
-		"Algeria",
-		"Andorra",
-		"Angola",
-		"Anguilla",
-		"Antigua & Barbuda",
-		"Argentina",
-		"Armenia",
-		"Aruba",
-		"Australia",
-		"Austria",
-		"Azerbaijan",
-		"Bahamas",
-		"Bahrain",
-		"Bangladesh",
+		"A", "Abacate", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda",
+		"Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh",
+		
 		"Barbados",
 		"Belarus",
 		"Belgium",
