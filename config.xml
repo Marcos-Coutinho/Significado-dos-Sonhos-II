@@ -8,17 +8,17 @@
         Marcos Coutinho
     </author>
 
-    <content src="splash.html" />
+    
 	
 	<preference name="orientation" value="portrait" />
 	<preference name="android-installLocation" value="auto" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="21" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
+	
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#0b0c1b" /> <!--  -->	
 	<preference name="StatusBarDefaultScrollToTop" value="false" />
-	<preference name="StatusBarStyle" value="lightcontent" />  <!-- lightcontent  blacktranslucent -->
-	
+	<preference name="StatusBarStyle" value="lightcontent" />  <!-- lightcontent  blacktranslucent -->	
 
     <plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />	
    
@@ -41,6 +41,7 @@
 	</platform>
 	
     <access origin="*" />
+	
 	<allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -59,5 +60,7 @@
     </platform>
 	
 	<icon src="www/img/icone_app.png" />
+	
+	<content src="splash.html" />
 	
 </widget>
