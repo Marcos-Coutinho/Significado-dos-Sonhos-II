@@ -19,9 +19,8 @@
 }
 
 .separar_ocorrencia {
-	/* margin-top:130px; */
 	font-size:14px;
-	height:1.2px;
+	height:5px;
 	margin-left:10px;
 	margin-right:10px;
 	background:#ccc;
@@ -41,7 +40,6 @@
 .style_resultado a{
 	width:100%;
 	display:block;
-	/* background:#ffff00; */
 	padding-bottom:5px;
 	padding-top:5px;
 }
