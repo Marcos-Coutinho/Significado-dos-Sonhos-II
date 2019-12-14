@@ -54,6 +54,13 @@
 	color:#000;
 }
 
+.conteudo_resultado {
+	position: relative; 
+	margin-top:70px;
+	margin-bottom:50px;
+	width:100%;
+}
+
 /*-- responsivo --*/ 
 @media(min-width:1024px){
 
