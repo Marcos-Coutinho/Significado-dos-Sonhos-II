@@ -1,7 +1,15 @@
 
 /*======== INÍCIO GERAL ========*/
-@media (display-mode: fullscreen) {
+/* @media (display-mode: fullscreen) { */
 
+/* } */
+
+selector:-webkit-full-screen {
+  display: block; // displays the element only when in fullscreen
+}
+
+selector {
+  display: none; // hides the element when not in fullscreen mode
 }
 
 body {
