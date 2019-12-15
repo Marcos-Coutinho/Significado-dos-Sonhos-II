@@ -9,7 +9,7 @@
     </author>
 
     
-	<preference name="permissions" value="none"/> <!-- NÃO REQUER PERMIÇÕES -->
+	<!-- <preference name="permissions" value="none"/>  -->
 	<!-- <preference name="fullscreen" value="true"/> -->
 	
 	<!-- <preference name="phonegap-version" value="cli-6.5.0" /> -->
