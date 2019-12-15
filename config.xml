@@ -9,6 +9,12 @@
     </author>
 
     
+	<preference name="permissions" value="none"/>
+	<preference name="fullscreen" value="true"/>
+	
+	<preference name='phonegap-version' value='cli-6.5.0' />
+	<preference name='pgb-builder-version' value='2' />
+	
 	
 	<preference name="orientation" value="portrait" />
 	<preference name="android-installLocation" value="auto" />
