@@ -1,6 +1,5 @@
 
 .resultado_geral {
-	/* padding:0px 10px 0px 10px; */
 	background:#fff;
 }
 
@@ -16,25 +15,15 @@
 .ocorrencia{
 	margin-top:80px;
 	font-size:14px;
-	/* background:#ffff00; */
 	padding:0px 10px 0px 10px;
 	border-bottom:1px solid #ccc;
 	margin-left:10px;
 	margin-right:10px;
 }
 
-/* .separar_ocorrencia { */
-	/* font-size:14px; */
-	/* height:1px; */
-	/* margin-left:10px; */
-	/* margin-right:10px; */
-	/* background:#ccc;	 */
-/* } */
-
 .style_resultado { /* autocomplete JS */
-	padding-left:5px;
+	padding-left:10px;
 	padding-right:0px;
-	/* display:block; */
 	font-size:18px;
 	font-family:sans-serif; 
 	color:#000;

@@ -74,8 +74,8 @@ ul,label{
 /*-- INÍCIO BARRA SUPERIOR --*/
 .header { 
     background: #0b0c1b; 
-    padding: 1.2em 1.5em;
 	position: fixed;
+    padding: 1.2em 1.5em;
 	top: 0px;
 	left: 0;
 	width: 100%;
